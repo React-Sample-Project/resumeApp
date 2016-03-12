@@ -1,2 +1,2 @@
 
-import Hello from './dist/app.jsx';
+import Home from './src/home/home.jsx';

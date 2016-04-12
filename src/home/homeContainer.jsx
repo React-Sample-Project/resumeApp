@@ -7,5 +7,3 @@ export default class Home extends React.Component {
     return <div><Navbar/></div>
   }
 }
-
-ReactDOM.render(React.createElement(Home), document.getElementById('app'));

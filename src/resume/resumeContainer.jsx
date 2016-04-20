@@ -23,7 +23,8 @@ export default class ResumeContainer extends React.Component {
         email: "blake.wight@gmail.com",
         mediaAccounts: [
           {title: "facebook", baseURL: "www.facebook.com/", userExtension: "blake.wight", fa: "fa fa-facebook"},
-          {title: "linkedIn", baseURL: "www.linkedin.com/in/", userExtension: "blakewight", fa: "fa fa-linkedin"}
+          {title: "linkedIn", baseURL: "www.linkedin.com/in/", userExtension: "blakewight", fa: "fa fa-linkedin"},
+          {title: "twitter", baseURL: "www.twitter.com/", userExtension:"Bwighthunter", fa: "fa fa-twitter"}
         ]
       },
       sections: [{
@@ -82,7 +83,7 @@ export default class ResumeContainer extends React.Component {
   }
 
   render() {
-    let sections = this.state.sections.map((section, i) => <div><hr /><Section key={i} data={section} /></div>)
+    let sections = this.state.sections.map((section, i) => <div><hr /><Section data={section} key={i} /></div>)
 
     return (
       <div style={{backgroundColor: '#222222', padding: 20}}>

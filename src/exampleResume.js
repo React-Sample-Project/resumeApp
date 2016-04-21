@@ -19,10 +19,8 @@ const exampleResume = {
   },
   "sections": [{
     "type": "education",
-    "id": 1,
     "schools": [
       {
-        "id": 1,
         "name": "Brigham Young University",
         "logoURL": "some URL here",
         "city": "Provo",
@@ -38,7 +36,6 @@ const exampleResume = {
   },
   {
     "type": "experience",
-    "id": 2,
     "jobs": [
       {
         "companyName": "BYU Store",
@@ -62,7 +59,6 @@ const exampleResume = {
   },
   {
     "type": "generic",
-    "id": 3,
     "title": "Skills",
     "subSections": [
       "Proficient in C++, HTML, CSS, JavaScript, Python, SQL, C#",

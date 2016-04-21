@@ -11,13 +11,14 @@ import Resume from './resume/resumeContainer.jsx';
 import HomeReducer from './home/homeReducer.js';
 import ResumeReducer from './resume/resumeReducer.js';
 
+
 // Add the reducer to your store on the `routing` key
-const store = createStore(
+export const store = createStore(
   combineReducers({
-    HomeReducer,
-    ResumeReducer,
+    home: HomeReducer,
+    resume: ResumeReducer,
     routing: routerReducer
-  }))
+  }));
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store)
@@ -34,5 +35,4 @@ const render = () => {
     document.getElementById('app')
 )};
 
-store.subscribe(render);
 render();

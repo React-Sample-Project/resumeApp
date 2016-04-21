@@ -11,8 +11,8 @@ export default class Section extends React.Component {
 
     var section = {
       'education': <EducationSection  data={data} />,
-    'experience': <ExperienceSection data={data} />,
-  'generic': <GenericSection data={data} />
+      'experience': <ExperienceSection data={data} />,
+      'generic': <GenericSection data={data} />
     }
 
     return section[data.type];

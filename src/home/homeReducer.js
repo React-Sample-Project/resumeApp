@@ -1,6 +1,6 @@
 
 
-const home = (state, action) => {
+const home = (state = {}, action) => {
 
   switch(action.type){
     case "something":

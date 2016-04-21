@@ -8,13 +8,14 @@ export default class ExperienceSection extends React.Component {
 
   }
   render() {
-      var jobs = this.props.data.jobs.map((job,i) => <Job data={job} key={i} />);
+    let { jobs } = this.props.data
+    let jobSet = jobs.map((job,i) => <Job data={job} key={i} />);
 
-      return(
-      <div>
-        <h3>Experience</h3>
-        {jobs}
-      </div>
-      )
-    }
+    return(
+    <div>
+      <h3>Experience</h3>
+      {jobSet}
+    </div>
+    )
+  }
 }

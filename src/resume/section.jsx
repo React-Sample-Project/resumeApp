@@ -7,12 +7,14 @@ import EducationSection from './educationSection';
 export default class Section extends React.Component {
 
   render() {
-      var section = {
-        'education': <EducationSection  data={this.props.data} />,
-        'experience': <ExperienceSection data={this.props.data} />,
-        'generic': <GenericSection data={this.props.data} />
-      }
+    let {data} = this.props;
 
-      return section[this.props.data.type];
+    var section = {
+      'education': <EducationSection  data={data} />,
+    'experience': <ExperienceSection data={data} />,
+  'generic': <GenericSection data={data} />
+    }
+
+    return section[data.type];
   }
 }

@@ -2,15 +2,15 @@ import React from 'react';
 
 export default class School extends React.Component {
   render() {
-    let school = this.props.data;
+    let { name, college, degree, major, graduation, gpa, specializedCoursework } = this.props.data;
 
     return(
       <div>
-        <h5>{school.name} - {school.college}</h5>
-        <p>{school.degree} {school.major}</p>
-        <p>{school.graduation} </p>
-        <p>GPA: {school.gpa} </p>
-        <p>Specialized Coursework: {school.specializedCoursework}</p>
+        <h5>{name} - {college}</h5>
+        <p>{degree} {major}</p>
+        <p>{graduation} </p>
+        <p>GPA: {gpa} </p>
+        <p>Specialized Coursework: {specializedCoursework}</p>
       </div>
     )
   }

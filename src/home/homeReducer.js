@@ -4,9 +4,9 @@ const home = (state, action) => {
 
   switch(action.type){
     case "something":
-      return null;
+      return state;
     default:
-      return null;
+      return state;
     }
 }
 

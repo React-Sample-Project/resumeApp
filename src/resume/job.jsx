@@ -3,19 +3,19 @@ import React from 'react';
 export default class Job extends React.Component {
 
   render() {
-    let job = this.props.data;
+    let { explanations, title, companyName, startDate, endDate, city, state } = this.props.data.job;
 
-    var explanations = job.explanations.map((explanation, i) => <li key={i}>{explanation}</li>);
+    explanations = explanations.map((explanation, i) => <li key={i}>{explanation}</li>);
 
-    var endDate = job.endDate ? job.endDate : 'Current'
+    endDate = endDate || 'Current';
 
     return (
       <div>
         <p><strong>{job.title}</strong></p>
-        <p>{job.companyName}<span className="pull-right">{job.startDate} - {endDate}</span></p>
-        <p>{job.city}, {job.state}</p>
+        <p>{companyName}<span className="pull-right">{startDate} - {endDate}</span></p>
+        <p>{city}, {state}</p>
         <ul>
-          {explanations}
+          {exps}
         </ul>
       </div>
     )

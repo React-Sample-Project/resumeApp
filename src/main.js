@@ -17,8 +17,7 @@ const store = createStore(
     HomeReducer,
     ResumeReducer,
     routing: routerReducer
-  })
-)
+  }))
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store)

@@ -3,7 +3,7 @@ import {Row, Col, Image} from 'react-bootstrap';
 
 export default class Header extends React.Component {
   render () {
-    let {imageURL, lastName, firstName, title, phone, city, state, mediaAccounts} = this.props.data;
+    let { imageURL, lastName, firstName, title, phone, city, state, mediaAccounts } = this.props.data;
     let mediaLinks = mediaAccounts.map((acct,i) => <a style={{marginRight: 5}} key={i} href={'//'+acct.baseURL + acct.userExtension}><i className={acct.fa} /></a>)
 
     return (

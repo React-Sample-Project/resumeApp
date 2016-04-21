@@ -18,7 +18,7 @@ export const store = createStore(
     home: HomeReducer,
     resume: ResumeReducer,
     routing: routerReducer
-  }));
+  }), undefined, window.devToolsExtension ? window.devToolsExtension() : undefined);
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store)

@@ -7,7 +7,7 @@ const ResumeReducer = (state = exampleResume, action) => {
     case UPLOAD_IMAGE:
       return state;
     case EDIT_RESUME:
-      
+      console.log("in the reducer");
       return state;
     case MOVE_SECTION:
       return state;

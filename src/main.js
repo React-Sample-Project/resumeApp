@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import Home from './home/homeContainer.jsx';
@@ -28,8 +28,8 @@ const render = () => {
     <Provider store={store}>
       { /* Tell the Router to use our enhanced history */ }
       <Router history={history}>
-        <Route path="/" component={Home}></Route>
-        <Route path="/resume" component={Resume}></Route>
+        <Route path="/" component={Home} />
+        <Route path="/resume" component={Resume} />
       </Router>
     </Provider>,
     document.getElementById('app')

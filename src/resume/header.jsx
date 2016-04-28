@@ -19,7 +19,7 @@ export default class Header extends React.Component {
   render () {
     let { imageURL, lastName, firstName, title, phone, city, state, mediaAccounts } = this.props.data;
     let edit = this.props.edit;
-    let mediaLinks = mediaAccounts.map((acct,i) => <a style={{marginRight: 5}} key={i} href={ '//' + acct.baseURL + acct.userExtension }><Icon icon={ acct.fa } /></a>)
+    let mediaLinks = mediaAccounts.map((acct,i) => <a style={{marginRight: 5}} key={acct.id} href={ '//' + acct.baseURL + acct.userExtension }><Icon icon={ acct.fa } /></a>)
 
     return (
       <Row>

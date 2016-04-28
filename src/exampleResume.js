@@ -1,5 +1,6 @@
 const exampleResume = {
   "user": {
+    "id": 1,
     "firstName": "Edward",
     "lastName": "Wight",
     "imageURL": "../images/bwface.jpg",
@@ -12,15 +13,16 @@ const exampleResume = {
     "company": "Pariveda Solutions",
     "email": "blake.wight@gmail.com",
     "mediaAccounts": [
-      {"title": "facebook", "baseURL": "www.facebook.com/", "userExtension": "blake.wight", "fa": "fa fa-facebook"},
-      {"title": "linkedIn", "baseURL": "www.linkedin.com/in/", "userExtension": "blakewight", "fa": "fa fa-linkedin"},
-      {"title": "twitter", "baseURL": "www.twitter.com/", "userExtension":"Bwighthunter", "fa": "fa fa-twitter"}
+      {"id": 1, "title": "facebook", "baseURL": "www.facebook.com/", "userExtension": "blake.wight", "fa": "fa fa-facebook"},
+      {"id": 2, "title": "linkedIn", "baseURL": "www.linkedin.com/in/", "userExtension": "blakewight", "fa": "fa fa-linkedin"},
+      {"id": 3, "title": "twitter", "baseURL": "www.twitter.com/", "userExtension":"Bwighthunter", "fa": "fa fa-twitter"}
     ]
   },
   "sections": [{
     "type": "education",
     "schools": [
       {
+        "id": 1,
         "name": "Brigham Young University",
         "logoURL": "some URL here",
         "city": "Provo",
@@ -38,22 +40,24 @@ const exampleResume = {
     "type": "experience",
     "jobs": [
       {
+        "id": 1,
         "companyName": "BYU Store",
         "title": "Web Developer",
         "city": "Provo",
         "state": "UT",
         "startDate":"1/2001",
         "endDate":"2/2006",
-        "explanations": ["blah blah blah, I loved this job","And i freakin killed it at this job"]
+        "explanations": [{"id": 1, data: "blah blah blah, I loved this job"},{"id": 2, data: "And i freakin killed at it too"}]
       },
       {
+        "id": 2,
         "companyName": "DOMO",
         "title": "QA Engineer Intern",
         "city": "American Fork",
         "state": "UT",
         "startDate":"3/2004",
         "endDate": null,
-        "explanations": ["blah blah blah, I loved this job","And i freakin killed at it too"]
+        "explanations": [{"id": 1, data: "blah blah blah, I loved this job"},{"id": 2, data: "And i freakin killed at it too"}]
       }
     ]
   },
@@ -61,8 +65,8 @@ const exampleResume = {
     "type": "generic",
     "title": "Skills",
     "subSections": [
-      "Proficient in C++, HTML, CSS, JavaScript, Python, SQL, C#",
-      "My hobbies include blah blah blah"
+      {"id": 1,"data": "Proficient in C++, HTML, CSS, JavaScript, Python, SQL, C#"},
+      {"id": 2,"data": "My hobbies include blah blah blah"}
     ]
   }
 ]}

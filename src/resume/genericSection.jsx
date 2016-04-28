@@ -3,7 +3,7 @@ export default class GenericSection extends React.Component{
 
   render () {
     let subSections = this.props.data.subSections;
-    let sections = subSections.map((subSection, i) => <li key={i}>{subSection}</li>)
+    let sections = subSections.map((subSection, i) => <li key={subSection.id}>{subSection.data}</li>)
 
     return (
       <div>

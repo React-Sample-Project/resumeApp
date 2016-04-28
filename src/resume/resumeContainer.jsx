@@ -17,7 +17,7 @@ export class resumeContainer extends React.Component {
 
   render() {
     let { user, sections } = this.props.resume;
-    let secs = sections.map((section, i) => <div><hr /><Section edit={ edit } data={ section } key={ i } /></div>);
+    let secs = sections.map((section, i) => <div><hr /><Section edit={ edit } data={ section } key={ section.id } /></div>);
     let edit = this.state.edit;
 
     return (

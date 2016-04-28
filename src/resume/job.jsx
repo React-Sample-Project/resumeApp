@@ -5,7 +5,7 @@ export default class Job extends React.Component {
   render() {
     let { explanations, title, companyName, startDate, endDate, city, state } = this.props.data;
 
-    let exps = explanations.map((explanation, i) => <li key={i}>{explanation}</li>);
+    let exps = explanations.map((exp, i) => <li key={ exp.id }>{ exp.data }</li>);
 
     let endDateMaybe = endDate || 'Current';
     return (

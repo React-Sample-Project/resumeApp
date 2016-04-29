@@ -4,16 +4,19 @@ import Section from './section.jsx';
 import Header from './header.jsx';
 import {Row, Col} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import ResumeReducer from './resumeReducer.js';
 
 const mapStateToProps = (state) => ({ resume: store.getState().resume });
 
 export class resumeContainer extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {edit: false};
+    this.toggleEdit = this.toggleEdit.bind(this);
   }
+
+  toggleEdit(){
+    this.setState({ edit: !this.state.edit })
+  };
 
   render() {
     let { user, sections } = this.props.resume;

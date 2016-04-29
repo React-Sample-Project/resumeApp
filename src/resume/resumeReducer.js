@@ -1,18 +1,24 @@
 import Redux from 'redux';
-import { UPLOAD_IMAGE, EDIT_RESUME, MOVE_SECTION } from './resumeActions.js';
+import { EDIT_RESUME_FIRSTNAME, EDIT_RESUME_LASTNAME } from './resumeActions.js';
 import exampleResume from '../exampleResume.js';
 
 const ResumeReducer = (state = exampleResume, action) => {
   switch(action.type){
-    case UPLOAD_IMAGE:
-      return state;
-    case EDIT_RESUME:
-      console.log("in the reducer");
-      return state;
-    case MOVE_SECTION:
-      return state;
+    case EDIT_RESUME_FIRSTNAME:
+      return HeaderReducer(state, action);
+    case EDIT_RESUME_LASTNAME:
+      return HeaderReducer(state, action);
     default:
       return state;
+  }
+}
+
+const HeaderReducer = (state, action) => {
+  switch(action.type){
+    case EDIT_RESUME_FIRSTNAME:
+      return {...state, "user": { ...state.user, "firstName": action.value }};
+    case EDIT_RESUME_LASTNAME:
+      return {...state, "user": { ...state.user, "lastName": action.value }};
   }
 }
 

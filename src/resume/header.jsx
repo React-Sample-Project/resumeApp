@@ -1,19 +1,22 @@
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
-import ConditionalInput from '../utilities/conditionalInput.jsx';
+import ContentEditable from '../utilities/contentEditable.jsx';
 import Icon from '../utilities/icon.jsx';
-import ResumeReducer from './resumeReducer';
-import { EDIT_RESUME } from './resumeActions';
+import { store } from '../main.js';
+import { EDIT_RESUME_FIRSTNAME, EDIT_RESUME_LASTNAME, EDIT_RESUME_TITLE } from './resumeActions.js';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor(props){
     super(props);
     this.edit = this.edit.bind(this);
   }
 
-  edit(val){
-    console.log(val);
-    ResumeReducer(this.props.data , {type: EDIT_RESUME, data: val})
+  edit(obj){
+    store.dispatch({
+      type: obj.action,
+      id: obj.id,
+      value: obj.target.value
+    });
   }
 
   render () {
@@ -28,10 +31,11 @@ export default class Header extends React.Component {
           <Row>
             <Col md={6}>
               <Row>
-                <ConditionalInput editFunc= { this.edit } placeholder="First Name" defaultValue={ firstName }>{ firstName } </ConditionalInput><span>{ lastName }</span>
+                <ContentEditable action={EDIT_RESUME_FIRSTNAME} html={ firstName } disabled={ edit } onChange={ this.edit } tagName="span"/> 
+                <ContentEditable action={EDIT_RESUME_LASTNAME} html={ lastName } disabled={ edit } onChange={ this.edit } tagName="span"/>
               </Row>
               <Row>
-                <span>{ title }</span>
+                <ContentEditable action={EDIT_RESUME_TITLE} html={ title } disabled={ edit } onChange={ this.edit } tagName="span"/>
               </Row>
             </Col>
             <Col md={6}>
@@ -50,3 +54,5 @@ export default class Header extends React.Component {
       </Row>
     )}
 }
+
+export default Header;

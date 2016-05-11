@@ -13,9 +13,9 @@ const exampleResume = {
     "company": "Pariveda Solutions",
     "email": "blake.wight@gmail.com",
     "mediaAccounts": [
-      {"id": 1, "title": "facebook", "baseURL": "www.facebook.com/", "userExtension": "blake.wight", "fa": "fa fa-facebook"},
-      {"id": 2, "title": "linkedIn", "baseURL": "www.linkedin.com/in/", "userExtension": "blakewight", "fa": "fa fa-linkedin"},
-      {"id": 3, "title": "twitter", "baseURL": "www.twitter.com/", "userExtension":"Bwighthunter", "fa": "fa fa-twitter"}
+      {"id": 1, acctId: 1, "extension": "blake.wight"},
+      {"id": 2, acctId: 2, "extension": "blakewight"},
+      {"id": 3, acctId: 3, "extension":"Bwighthunter"}
     ]
   },
   "sections": [{

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Input, Modal} from 'react-bootstrap';
+import {Button, FormControl, Modal} from 'react-bootstrap';
 
 export default class LoginModal extends React.Component {
 
@@ -10,8 +10,8 @@ export default class LoginModal extends React.Component {
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Input type="text" placeholder="email"/>
-            <Input type="password" placeholder="password" />
+            <FormControl type="text" placeholder="email"/>
+            <FormControl type="password" placeholder="password" />
             <Button bsStyle="success">Login</Button>
             <Button bsStyle="danger">Cancel</Button>
           </Modal.Body>

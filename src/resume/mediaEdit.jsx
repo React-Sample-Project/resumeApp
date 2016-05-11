@@ -59,13 +59,13 @@ class MediaEdit extends React.Component {
     ))
 
     let dropdownTitle = selectedMedia ? <span><Icon icon={selectedMedia.icon }/> { selectedMedia.name }</span> : "Pick one";
-
+    console.log(edit);
     if(edit){
-      return (<a href={ '//' + selectedMedia.url + selectedMedia.userExtension }><Icon icon={ selectedMedia.icon }/> </a>);
+      return (<a href={ '//' + selectedMedia.url + selectedMedia.extension }><Icon icon={ selectedMedia.icon }/> </a>);
     }
 
     return (
-      <span>
+      <span style={{paddingRight: 5}}>
       <a onClick={ this.open }><Icon icon={ selectedMedia.icon } /></a>
       <Modal show={ this.state.showModal } onHide={ this.close }>
         <Modal.Header closeButton>

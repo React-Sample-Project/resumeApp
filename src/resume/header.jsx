@@ -23,7 +23,7 @@ class Header extends React.Component {
   render () {
     let { imageURL, lastName, firstName, title, phone, city, state, mediaAccounts } = this.props.data;
     let edit = this.props.edit;
-    let mediaLinks = mediaAccounts.map((acct) => <MediaEdit key={ acct.id } acct={ acct } />)
+    let mediaLinks = mediaAccounts.map((acct) => <MediaEdit key={ acct.id } edit={ edit } acct={ acct } />)
 
     return (
       <Row>
